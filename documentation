@@ -1,9 +1,0 @@
-# World News API
-
-This API allows you to place a grocery order which will be ready for pick-up in the store.
-
-The API is available at `https://apilayer.com/marketplace/world_news-api#authentication`
-  
-All API requests must be made over HTTPS. Calls made over plain HTTP will fail. API requests without authentication will also fail.
-
-
