@@ -6,6 +6,6 @@ The API is available at https://api.apilayer.com/world_news
 
 ## API Authentication
 
-All endpoints require authentication, they expect the API key to be provided as a query parameter named `apikey`.
-All requests made to the API must hold a custom HTTP header named "apikey". Implementation differs with each programming language. Below are some samples.
-All API requests must be made over HTTPS. Calls made over plain HTTP will fail. API requests without authentication will also fail.
+All requests made to the API must hold a custom HTTP header named "apikey". (true)
+All API requests must be made over HTTPS. Calls made over plain HTTP will fail. (fail)
+API requests without authentication will also fail. (true)
