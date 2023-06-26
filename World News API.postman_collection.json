@@ -1,0 +1,744 @@
+{
+	"info": {
+		"_postman_id": "818e32cc-77ad-4b27-9ba3-9992d0339912",
+		"name": "World News API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "7518472"
+	},
+	"item": [
+		{
+			"name": "Extract News",
+			"item": [
+				{
+					"name": "Extract News",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": {
+								"value": "{{apikey}}",
+								"key": "apikey"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "apikey",
+								"value": "{{apikey}} ",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{WorldNewsURL}}/extract-news?url=https://nature.com&analyze=true",
+							"host": [
+								"{{WorldNewsURL}}"
+							],
+							"path": [
+								"extract-news"
+							],
+							"query": [
+								{
+									"key": "url",
+									"value": "https://nature.com"
+								},
+								{
+									"key": "analyze",
+									"value": "true"
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Extract News -  HTTP",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": {
+								"value": "{{apikey}}",
+								"key": "apikey"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "apikey",
+								"value": "{{apikey}} ",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://api.apilayer.com/world_news/extract-news?url=http://www.allgemeine-zeitung.de/&analyze=true",
+							"protocol": "http",
+							"host": [
+								"api",
+								"apilayer",
+								"com"
+							],
+							"path": [
+								"world_news",
+								"extract-news"
+							],
+							"query": [
+								{
+									"key": "url",
+									"value": "http://www.allgemeine-zeitung.de/"
+								},
+								{
+									"key": "analyze",
+									"value": "true"
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Extract News- no auth",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "apikey",
+								"value": "{{apikey}} ",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{WorldNewsURL}}/extract-news?url=https://bochnianin.pl/&analyze=true",
+							"host": [
+								"{{WorldNewsURL}}"
+							],
+							"path": [
+								"extract-news"
+							],
+							"query": [
+								{
+									"key": "url",
+									"value": "https://bochnianin.pl/"
+								},
+								{
+									"key": "analyze",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Extract News- without required params",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": {
+								"value": "{{apikey}}",
+								"key": "apikey"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "apikey",
+								"value": "{{apikey}} ",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{WorldNewsURL}}/extract-news?url=http://www.allgemeine-zeitung.de/",
+							"host": [
+								"{{WorldNewsURL}}"
+							],
+							"path": [
+								"extract-news"
+							],
+							"query": [
+								{
+									"key": "url",
+									"value": "http://www.allgemeine-zeitung.de/"
+								},
+								{
+									"key": "analyze",
+									"value": "true",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Geo coordinates",
+			"item": [
+				{
+					"name": "Geo coordinates",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": {
+								"value": "{{apikey}}",
+								"key": "apikey"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "apikey",
+								"value": "{{apikey}}",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{WorldNewsURL}}/geo-coordinates?location={{$randomCity}}",
+							"host": [
+								"{{WorldNewsURL}}"
+							],
+							"path": [
+								"geo-coordinates"
+							],
+							"query": [
+								{
+									"key": "location",
+									"value": "{{$randomCity}}"
+								},
+								{
+									"key": "location",
+									"value": "Wrocław",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Geo coordinates - HTTP",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": {
+								"value": "{{apikey}}",
+								"key": "apikey"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "apikey",
+								"value": "{{apikey}}",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://api.apilayer.com/world_news/geo-coordinates?location={{$randomCity}}",
+							"protocol": "http",
+							"host": [
+								"api",
+								"apilayer",
+								"com"
+							],
+							"path": [
+								"world_news",
+								"geo-coordinates"
+							],
+							"query": [
+								{
+									"key": "location",
+									"value": "{{$randomCity}}"
+								},
+								{
+									"key": "location",
+									"value": "New York",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Geo coordinates- no auth",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "apikey",
+								"value": "{{apikey}}",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{WorldNewsURL}}/geo-coordinates?location=Tunis",
+							"host": [
+								"{{WorldNewsURL}}"
+							],
+							"path": [
+								"geo-coordinates"
+							],
+							"query": [
+								{
+									"key": "location",
+									"value": "{{$randomCity}}",
+									"disabled": true
+								},
+								{
+									"key": "location",
+									"value": "Tunis"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Geo coordinates- country not city",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": {
+								"value": "{{apikey}}",
+								"key": "apikey"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "apikey",
+								"value": "{{apikey}}",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{WorldNewsURL}}/geo-coordinates?location={{$randomCountry}}",
+							"host": [
+								"{{WorldNewsURL}}"
+							],
+							"path": [
+								"geo-coordinates"
+							],
+							"query": [
+								{
+									"key": "location",
+									"value": "{{$randomCity}}",
+									"disabled": true
+								},
+								{
+									"key": "location",
+									"value": "{{$randomCountry}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Search news",
+			"item": [
+				{
+					"name": "Search news",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": {
+								"value": "{{apikey}}",
+								"key": "apikey"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "apikey",
+								"value": "{{apikey}}",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{WorldNewsURL}}/search-news?earliest-publish-date=2023-06-01&language=en&number=5&sort=publish-time&sort-direction=desc",
+							"host": [
+								"{{WorldNewsURL}}"
+							],
+							"path": [
+								"search-news"
+							],
+							"query": [
+								{
+									"key": "authors",
+									"value": "Paul Kirby",
+									"disabled": true
+								},
+								{
+									"key": "earliest-publish-date",
+									"value": "2023-06-01"
+								},
+								{
+									"key": "entities",
+									"value": "Tesla",
+									"disabled": true
+								},
+								{
+									"key": "language",
+									"value": "en"
+								},
+								{
+									"key": "latest-publish-date",
+									"value": "2023-06-23",
+									"disabled": true
+								},
+								{
+									"key": "location-filter",
+									"value": "51.050407, 13.737262, 100",
+									"disabled": true
+								},
+								{
+									"key": "max-sentiment",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "min-sentiment",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "news-sources",
+									"value": "https://www.bbc.co.uk",
+									"disabled": true
+								},
+								{
+									"key": "number",
+									"value": "5"
+								},
+								{
+									"key": "offset",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "sort",
+									"value": "publish-time"
+								},
+								{
+									"key": "sort-direction",
+									"value": "desc"
+								},
+								{
+									"key": "source-countries",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "text",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search news - HTTP",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": {
+								"value": "{{apikey}}",
+								"key": "apikey"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "apikey",
+								"value": "{{apikey}}",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://api.apilayer.com/world_news/search-news?language=pl",
+							"protocol": "http",
+							"host": [
+								"api",
+								"apilayer",
+								"com"
+							],
+							"path": [
+								"world_news",
+								"search-news"
+							],
+							"query": [
+								{
+									"key": "authors",
+									"value": "Francesca Street",
+									"disabled": true
+								},
+								{
+									"key": "earliest-publish-date",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "entities",
+									"value": "Tesla",
+									"disabled": true
+								},
+								{
+									"key": "language",
+									"value": "pl"
+								},
+								{
+									"key": "latest-publish-date",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "location-filter",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "max-sentiment",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "min-sentiment",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "news-sources",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "number",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "offset",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "sort",
+									"value": "publish-time",
+									"disabled": true
+								},
+								{
+									"key": "sort-direction",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "source-countries",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "text",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search news - no auth",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "apikey",
+								"value": "{{apikey}}",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{WorldNewsURL}}/search-news?authors=Francesca Street",
+							"host": [
+								"{{WorldNewsURL}}"
+							],
+							"path": [
+								"search-news"
+							],
+							"query": [
+								{
+									"key": "authors",
+									"value": "Francesca Street"
+								},
+								{
+									"key": "earliest-publish-date",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "entities",
+									"value": "Tesla",
+									"disabled": true
+								},
+								{
+									"key": "language",
+									"value": "english",
+									"disabled": true
+								},
+								{
+									"key": "latest-publish-date",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "location-filter",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "max-sentiment",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "min-sentiment",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "news-sources",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "number",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "offset",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "sort",
+									"value": "publish-time",
+									"disabled": true
+								},
+								{
+									"key": "sort-direction",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "source-countries",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "text",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "apikey",
+			"value": "Tl4R2N6PmqzBQYhw9Ej5pFEqfUGNs6Bb",
+			"type": "string"
+		},
+		{
+			"key": "WorldNewsURL",
+			"value": "https://api.apilayer.com/world_news",
+			"type": "string"
+		},
+		{
+			"value": "",
+			"type": "string",
+			"disabled": true
+		}
+	]
+}
